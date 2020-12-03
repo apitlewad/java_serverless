@@ -19,12 +19,12 @@ jobs:
     machine: true
     steps:
       - my-command
-          msg: msg from first build
+          msg: "msg from first build"
   build-second:
     machine: true
     steps:
       - my-command
-          msg: msg from second build
+          msg: "msg from second build"
     
 workflows:
   my-workflow:
