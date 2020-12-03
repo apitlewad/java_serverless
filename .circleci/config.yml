@@ -5,10 +5,14 @@ orbs:
 jobs:
   build-first:
     machine: true
-      - run: echo 'first build'
+    steps:
+      - checkout 
+      - run: echo "hello world"
   build-second:
     machine: true
-      - run: echo 'second build'
+      steps:
+        - checkout 
+        - run: echo "hello world"
     
 workflows:
   my-workflow:
