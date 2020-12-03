@@ -3,13 +3,13 @@ orbs:
   welcome: circleci/welcome-orb@0.4.1
 
 jobs:
-    buildfirst:
-        - welcome/run
-    buildsecond:
-        - welcome/run
+  build-first:
+    - welcome/run
+  build-second:
+    - welcome/run
     
 workflows:
   my-workflow:
     jobs:
-      - buildfirst
-      - buildsecond
+      - build-first
+      - build-second
