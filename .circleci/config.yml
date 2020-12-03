@@ -18,6 +18,6 @@ workflows:
   my-workflow:
     jobs:
       - build-first
-      - build-second
+      - build-second:
           requires:
             - build-first
