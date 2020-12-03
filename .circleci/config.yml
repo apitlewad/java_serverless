@@ -4,9 +4,11 @@ orbs:
 
 jobs:
   build-first:
-    - welcome/run
+    machine: true
+      - run: echo 'first build'
   build-second:
-    - welcome/run
+    machine: true
+      - run: echo 'second build'
     
 workflows:
   my-workflow:
