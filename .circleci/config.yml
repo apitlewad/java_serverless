@@ -19,5 +19,5 @@ workflows:
     jobs:
       - build-first
       - build-second
-        requires:
-          build-first
+          requires:
+            - build-first
