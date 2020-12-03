@@ -2,17 +2,22 @@ version: 2.1
 orbs:
   welcome: circleci/welcome-orb@0.4.1
 
+
+commands:
+  my-command:
+    steps:
+        - checkout 
+        - run: echo "hello world"
+  
 jobs:
   build-first:
     machine: true
     steps:
-      - checkout 
-      - run: echo "hello world"
+      - my-command
   build-second:
     machine: true
     steps:
-      - checkout 
-      - run: echo "hello world"
+      - my-command
     
 workflows:
   my-workflow:
