@@ -5,19 +5,26 @@ orbs:
 
 commands:
   my-command:
+    parameters:
+      msg:
+        description: message to be print
+        type: string
+        default: "hello"
     steps:
         - checkout 
-        - run: echo "hello world"
+        - run: echo << parameters.msg >>
   
 jobs:
   build-first:
     machine: true
     steps:
       - my-command
+        msg: msg from first build
   build-second:
     machine: true
     steps:
       - my-command
+        msg: msg from second build
     
 workflows:
   my-workflow:
